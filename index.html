@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="height: 100vh;">
+    <head>
+        <title>Vancouver Ice Cream</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body style="margin: 0; min-height: 100vh;">
+        <div class="column">
+            <h1 style="text-align: center; margin-bottom: 0;">MUX Blind Ice Cream Judging Results</h1>
+            <div style="text-align: center;">
+                <p style="padding: 0; margin-top: 0;">July 30, 2025</p>
+                <p style="padding-top: 0; margin-top: 0;">Mara Solen</p>
+            </div>
+            <p>
+                Description of the event
+            </p>
+            <div class="row">
+                <img src="images/EarnestIceCream.png" style="border-radius: 1em;">
+                <img src="images/RainOrShine.png" style="border-radius: 1em;">
+                <img src="images/Ben&Jerrys.avif" style="border-radius: 1em;">
+                <img src="images/ElephantGardenCreamery.png" style="border-radius: 1em;">
+            </div>
+            <p class="caption" style="text-align: center;">
+                Four different stores, the various flavours
+            </p>
+            <p>
+                Intro to first vis
+            </p>
+        </div>
+
+        <div id="price-visualization-container" class="visualization-container" first-render="true">
+            <svg id="price-visualization" class="visualization"></svg>
+        </div>
+
+        <div class="column">
+            <p>
+            </p>
+            <img src="images/ice-cream-station.JPG" style="border-radius: 1em;">
+            <p class="caption" style="text-align: center;">
+                Description of the image
+            </p>
+            <p>
+                Reveal the votes
+            </p>
+        </div>
+
+        <div id="vote-visualization-container" class="visualization-container">
+            <svg id="vote-visualization" class="visualization"></svg>
+        </div>
+
+        <div class="column">
+            <p>
+                Description of the winners and all that
+            </p>
+            <div class="row">
+                <img src="images/PXL_20250315_035703402.jpg" style="border-radius: 1em;">
+                <img src="images/PXL_20250502_034135935.jpg" style="border-radius: 1em;">
+                <img src="images/Ben&Jerrys.avif" style="border-radius: 1em;">
+            </div>
+            <p class="caption" style="text-align: center;">
+                Photo of elephant garden menu + my biased review of elephant garden
+            </p>
+            <p>
+                Intro to sankey diagram
+            </p>
+        </div>
+
+        <div id="sankey-visualization-container" class="visualization-container">
+            <svg id="sankey-visualization" class="visualization"></svg>
+        </div>
+
+        <div class="column">
+            <p>
+                Description of flavour preferences
+            </p>
+        </div>
+
+        <div id="tooltip"></div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
