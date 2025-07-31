@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
     </head>
     <body style="margin: 0; min-height: 100vh;">
         <div class="column">
@@ -18,56 +18,88 @@
                 <p style="padding-top: 0; margin-top: 0;">Mara Solen</p>
             </div>
             <p>
-                Description of the event
+                On July 9th, I (assisted by Matt Oddo) hosted a blind ice cream taste testing and judging event for
+                the HCI research group I'm in, called MUX (Multimodal User eXperience). I chose three local ice cream 
+                stores and a grocery store brand. From each brand, I got two of the most popular flavours. During the
+                event, Matt and I scooped ice cream into small paper cups which we gave to participants. We also told
+                the participants a code (i.e. A1, C2) for the ice cream. Once everyone had tried every ice cream, I 
+                asked them to vote by filling out a Google form with their favourite and second favourite flavours.
             </p>
             <div class="row">
                 <img src="images/EarnestIceCream.png" style="border-radius: 1em;">
-                <img src="images/RainOrShine.png" style="border-radius: 1em;">
-                <img src="images/Ben&Jerrys.avif" style="border-radius: 1em;">
+                <img src="images/RainOrShineIceCream.png" style="border-radius: 1em;">
+                <img src="images/Ben&Jerrys.png" style="border-radius: 1em;">
                 <img src="images/ElephantGardenCreamery.png" style="border-radius: 1em;">
             </div>
             <p class="caption" style="text-align: center;">
-                Four different stores, the various flavours
+                The three local stores were Earnest (code A), Rain or Shine (B), and Elephant Garden (D). The grocery store brand was
+                Ben & Jerry's (C). For all of these brands except for Elephant Garden, I got one dairy flavour and one 
+                vegan flavour. Elephant Garden was out of their vegan flavour when I tried to buy it, so I got a
+                second dairy flavour instead.
             </p>
             <p>
-                Intro to first vis
+                The three Vancouver stores are spread around the city. This map shows the locations. Earnest has the 
+                most physical locations, mostly
+                in East Vancouver and one in North Vancouver. Rain or Shine has a pop-up store downtown, and has three 
+                permanent physical locations at UBC, in Kitsilano, and on Cambie. Finally, Elephant Garden has one
+                location on Commercial Drive.
             </p>
         </div>
 
-        <div id="price-visualization-container" class="visualization-container" first-render="true">
-            <svg id="price-visualization" class="visualization"></svg>
-        </div>
+        <div id="map" class="visualization-container" first-render="true"></div>
 
         <div class="column">
             <p>
+                I purchased the pints for this event from the Earnest location on Frances Street and from the Rain or 
+                Shine location at UBC, and from the single Elephant Garden location on Commercial Drive. Ben & Jerry's 
+                is sold at most grocery stores, and I bought mine from the Safeway at Broadway and Commercial.
             </p>
             <img src="images/ice-cream-station.JPG" style="border-radius: 1em;">
             <p class="caption" style="text-align: center;">
-                Description of the image
+                The aftermath of the event, after we had revealed the ice cream brands and flavours and had put them
+                out for people to finish off. We used paper towels to show which cups of ice cream were associated with 
+                which code.
             </p>
             <p>
-                Reveal the votes
+                This bar chart shows how the votes were distributed between flavours. Since participants voted for both
+                their favourite and second favourite, you can use the slider below to choose how much weight to give the 
+                second favourite flavours.
             </p>
         </div>
 
         <div id="vote-visualization-container" class="visualization-container">
             <svg id="vote-visualization" class="visualization"></svg>
+            <div class="slidecontainer row">
+                <p style="flex: 1; text-align: start;">0%</p>
+                <input type="range" min="0" max="100" value="100" class="slider" id="myRange" style="flex: 95;">
+                <p style="flex: 1; text-align: end;">100%</p>
+            </div>
         </div>
 
         <div class="column">
             <p>
-                Description of the winners and all that
+                The clear winner is Elephant Garden's Matcha Honeycomb Nugget. When counting second favourite votes with 
+                the same weight as favourite votes, the second most popular was London Fog. It seems our group likes tea 
+                flavoured ice cream! I also find it interesting that both of the Cookies & Cream flavours from two 
+                different brands got the same number of votes, that Earnest's vegan flavour was more popular than their
+                dairy flavour, and that the vegan Rain or Shine flavour was by far the lease popular.
             </p>
             <div class="row">
-                <img src="images/PXL_20250315_035703402.jpg" style="border-radius: 1em;">
-                <img src="images/PXL_20250502_034135935.jpg" style="border-radius: 1em;">
-                <img src="images/Ben&Jerrys.avif" style="border-radius: 1em;">
+                <img src="images/flight1.jpg" style="border-radius: 1em;">
+                <img src="images/flight2.jpg" style="border-radius: 1em;">
+                <img src="images/flight3.jpg" style="border-radius: 1em;">
             </div>
             <p class="caption" style="text-align: center;">
-                Photo of elephant garden menu + my biased review of elephant garden
+                I have personally tried a lot of ice cream in Vancouver. My favourite place is definitely Elephant Garden,
+                and it was so validating to see my preference reflected in the results! Elephant Garden has a list of staple
+                flavours that are always available, and every month they have four different rotating flavours. I make it
+                a point to try all of their flavours every month, and my favourite way to do that is to go with a friend and 
+                get a flight with all four new flavours. These pictures show some of the flights of ice cream that I've gotten
+                over the last year or so. I highly recommend trying this place out!
             </p>
             <p>
-                Intro to sankey diagram
+                I was also curious about patterns in people's first and second choices. In this sankey diagram, participants'
+                top choices are on the left and their second choices are on the right.
             </p>
         </div>
 
@@ -77,17 +109,20 @@
 
         <div class="column">
             <p>
-                Description of flavour preferences
+                I don't see any huge trends, probably since we didn't have enough data. But some small trends are that the most
+                popular second choice among those who preferred matcha honeycomb was London fog, which is also tea based! I also 
+                see that no one who chose one of the cookies and cream flavours chose the other one as their second favourite.
             </p>
         </div>
-
-        <div id="tooltip"></div>
         
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+        <script src="https://unpkg.com/d3-array@1"></script>
+        <script src="https://unpkg.com/d3-collection@1"></script>
+        <script src="https://unpkg.com/d3-path@1"></script>
+        <script src="https://unpkg.com/d3-shape@1"></script>
+        <script src="https://unpkg.com/d3-sankey@0"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/customParseFormat.js"></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

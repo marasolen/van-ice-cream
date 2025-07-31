@@ -1,0 +1,101 @@
+[
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.14299228088952, 49.28653719137912]
+        },
+        "properties": {
+            "title": "Rain or Shine Ice Cream",
+            "address": "Stanley Park Seawall Path (Seasonal Truck)"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.14867165740998, 49.26795718073721]
+        },
+        "properties": {
+            "title": "Rain or Shine Ice Cream",
+            "address": "1926 W 4th Ave"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.24684248295324, 49.26638840037894]
+        },
+        "properties": {
+            "title": "Rain or Shine Ice Cream",
+            "address": "6001 University Blvd"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.11492839663474, 49.255129549792606]
+        },
+        "properties": {
+            "title": "Rain or Shine Ice Cream",
+            "address": "3382 Cambie St"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.0799597017335, 49.3122133657628]
+        },
+        "properties": {
+            "title": "Earnest Ice Cream",
+            "address": "127 W 1st St"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.07489466390895, 49.279556168274844]
+        },
+        "properties": {
+            "title": "Earnest Ice Cream",
+            "address": "1485 Frances St"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.10293144851953, 49.26881335070895]
+        },
+        "properties": {
+            "title": "Earnest Ice Cream",
+            "address": "1829 Quebec St"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.08991342855047, 49.24935651077687]
+        },
+        "properties": {
+            "title": "Earnest Ice Cream",
+            "address": "3992 Fraser St"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-123.06951143164649, 49.266258861563564]
+        },
+        "properties": {
+            "title": "Elephant Garden Creamery",
+            "address": "2080 Commercial Dr"
+        }
+    }
+]

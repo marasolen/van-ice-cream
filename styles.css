@@ -19,12 +19,6 @@ body {
 
 }
 
-.visualization-container .row svg {
-    width: 50%;
-    aspect-ratio: 1 / 1;
-    margin: 0;
-}
-
 .visualization {
     margin: auto;
     display: block;
@@ -84,6 +78,31 @@ p.caption {
   shape-rendering: crispEdges;
 }
 
+.marker {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.earnesticecream-marker {
+    background-image: url('images/earnestlogo.png');
+}
+
+.rainorshineicecream-marker {
+    background-image: url('images/rainorshinelogo.png');
+}
+
+.elephantgardencreamery-marker {
+    background-image: url('images/elephantgardenicon.png');
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
 @media screen and (max-width: 1680px) {
     .column {
         width: 70%;
@@ -134,4 +153,35 @@ p.caption {
     .visualization-container {
         width: 98%;
     }
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
 }
